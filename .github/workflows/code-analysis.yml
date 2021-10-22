@@ -15,12 +15,10 @@ on:
   workflow_call:
     inputs:
       languages:
+        type: string
         description: 'Languages to analyze'
         required: true
         
-  schedule:
-    - cron: '28 19 * * 3'
-
 jobs:
   analyze:
     name: Analyze
